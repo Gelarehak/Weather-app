@@ -1,0 +1,59 @@
+body {
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  line-height: normal;
+  color: rgb(66, 66, 66);
+}
+
+.app {
+  border: 1px solid rgb(255, 254, 254);
+  padding: 0px;
+  border-radius: 25px;
+  max-width: 600px;
+  margin: 30px auto;
+}
+.imgtoday {
+  width: 150px;
+  display: block;
+  margin: 0 auto;
+  padding: 20px;
+}
+.temperature {
+  font-size: 100px;
+}
+.degrees {
+  position: relative;
+  top: -50px;
+}
+.degrees:hover {
+  text-decoration: none;
+}
+.cloud {
+  margin: 0 auto;
+  padding: 0 auto;
+}
+.city {
+  font-size: 50px;
+  margin-bottom: 15px;
+}
+li {
+  list-style: none;
+}
+#firstcol {
+  padding: 10px 30px;
+  background: #ece2e1;
+  border-radius: 25px 1px 1px 25px;
+}
+#secondcol {
+  padding: 20px 30px;
+  background: #f3f1f5;
+  border-radius: 1px 25px 25px 1px;
+}
+.days {
+  font-size: 30px;
+}
+.hours {
+  font-size: 17px;
+}
+form {
+  margin: 10px 0px;
+}
