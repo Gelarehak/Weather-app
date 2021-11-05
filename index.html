@@ -10,6 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <title>Weather-app</title>
 
     <link
@@ -42,8 +43,10 @@
             <div class="discription">Dont forget your umberella</div>
           </div>
           <div class="col-7" id="secondcol">
-            <div class="days">Wednesday</div>
-            <div class="hours">7:54</div>
+            <div class="days"></div>
+            <div class="time">
+              <span class="hours">7</span>:<span class="minutes"></span>
+            </div>
             <form>
               <div class="row">
                 <div class="col-9">
@@ -51,6 +54,7 @@
                     type="search"
                     placeholder="Type a city"
                     class="form-control"
+                    id="seachcity"
                   />
                 </div>
                 <div class="col-3">
@@ -59,7 +63,13 @@
               </div>
             </form>
             <div class="weatherforecast" id="forecast"></div>
-            <div class="date">2021/01/20</div>
+            <div class="date">
+              <span class="year"></span>
+              /
+              <span class="month"></span>
+              /
+              <span class="dates"></span>
+            </div>
           </div>
         </div>
       </div>
