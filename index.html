@@ -26,21 +26,31 @@
       <div class="container">
         <div class="row">
           <div class="col-5" id="firstcol">
-            <span class="temperature">12</span>
+            <span class="temperature"></span>
             <span class="degrees">
-              <a href=" " id="celsiuse">℃</a>|<a href=" " id="fahrenhite">℉</a>
+              <a href=" " id="celsiuse" class="active">℃</a>|
+              <a href=" " id="fahrenhite" class="active">℉</a>
             </span>
-            <div class="cloud">Cloudy</div>
-            <img src="sun.png" alt="" class="imgtoday" />
-            <div class="city">Tehran</div>
+            <div class="cloud"></div>
+            <img
+              src="https://openweathermap.org/weather-conditions"
+              alt=""
+              class="imgtoday"
+              id="icon"
+            />
+            <div class="city" id="city"></div>
             <ul class="feels">
               <li>
-                <div class="feels-like">Fells like: 10°</div>
-                <div class="humidity">Humidity:55%</div>
-                <div class="wind">Wind: 28 km/h</div>
+                <div class="feels-like">
+                  Feels like: <span id="feellike"></span>°
+                </div>
+                <div class="humidity">
+                  Humidity: <span id="humidity"></span>%
+                </div>
+                <div class="wind">Wind: <span id="wind"></span> km/h</div>
               </li>
             </ul>
-            <div class="discription">Dont forget your umberella</div>
+            <div class="discription">Have a good day 😊</div>
           </div>
           <div class="col-7" id="secondcol">
             <div class="days"></div>
@@ -52,9 +62,9 @@
                 <div class="col-9">
                   <input
                     type="search"
-                    placeholder="Type a city"
+                    placeholder="Type a city..."
                     class="form-control"
-                    id="seachcity"
+                    id="searchcity"
                   />
                 </div>
                 <div class="col-3">

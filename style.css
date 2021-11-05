@@ -57,3 +57,14 @@ li {
 form {
   margin: 10px 0px;
 }
+.humidity {
+  margin-bottom: 1.5px;
+  margin-top: 1.5px;
+}
+.active {
+  color: rgb(66, 66, 66);
+  cursor: default;
+}
+.active:hover {
+  text-decoration: none;
+}
