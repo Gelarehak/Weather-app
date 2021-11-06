@@ -9,7 +9,7 @@ body {
   padding: 0px;
   border-radius: 25px;
   max-width: 600px;
-  margin: 30px auto;
+  margin: 30px auto 10px;
 }
 .imgtoday {
   width: 150px;
@@ -67,4 +67,14 @@ form {
 }
 .active:hover {
   text-decoration: none;
+}
+footer {
+  max-width: 600px;
+  margin: 0 auto;
+  color: gray;
+  text-align: center;
+}
+.discription {
+  text-align: center;
+  font-weight: bold;
 }
