@@ -1,7 +1,7 @@
 body {
   font-family: "Yanone Kaffeesatz", sans-serif;
   line-height: normal;
-  color: rgb(66, 66, 66);
+  color: #555258;
 }
 
 .app {
@@ -23,9 +23,17 @@ body {
 .degrees {
   position: relative;
   top: -50px;
+}
+#celsiuse {
   text-decoration: none;
 }
-.degrees:hover {
+#celsiuse:hover {
+  text-decoration: none;
+}
+#fahrenhite {
+  text-decoration: none;
+}
+#fahrenhite:hover {
   text-decoration: none;
 }
 .cloud {
@@ -35,14 +43,18 @@ body {
 .city {
   font-size: 50px;
   margin-bottom: 15px;
+  margin-top: 30px;
 }
 li {
   list-style: none;
 }
 #firstcol {
   padding: 10px 30px;
-  background: #ece2e1;
+  background: #e4d8d7;
   border-radius: 25px 1px 1px 25px;
+}
+#firstcol:hover {
+  transform: perspective(3000px) translate3d(20px, -5px, 120px);
 }
 #secondcol {
   padding: 20px 30px;
@@ -50,8 +62,9 @@ li {
   border-radius: 1px 25px 25px 1px;
   color: #ece2e1;
 }
+
 .days {
-  font-size: 30px;
+  font-size: 50px;
 }
 .time {
   font-size: 17px;
@@ -81,10 +94,7 @@ footer {
   font-weight: bold;
 }
 .date {
-  margin-top: 10px;
-  margin-left: 220px;
-  color: #ece2e1;
-  font-weight: bold;
+  margin-top: 0px;
 }
 hr {
   margin: 0 auto;
@@ -104,4 +114,9 @@ hr {
   transition: all 1ms ease-in-out;
   background: #ece2e1;
   color: rgb(66, 66, 66);
+  transform: perspective(900px) translate3d(-10px, 10px, 80px);
+}
+.lastupdate {
+  margin-left: 190px;
+  margin-top: 10px;
 }

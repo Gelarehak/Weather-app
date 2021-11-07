@@ -9,7 +9,33 @@ let weekdays = [
   "Saturday",
 ];
 
+function currentyear(getFullYear) {
+  let month = [
+    "Jan",
+    "Fen",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+  let months = month[now.getMonth()];
+  let dates = now.getDate();
+  if (dates < 10) {
+    dates = `0${dates}`;
+  }
+  return `${months}-${dates}`;
+}
+let dat = document.querySelector(".date");
+dat.innerHTML = currentyear(now);
+
 document.querySelector(".days").innerHTML = weekdays[now.getDay()];
+
 function currenttime(date) {
   let hours = now.getHours();
   if (hours < 10) {
@@ -23,19 +49,6 @@ function currenttime(date) {
 }
 let time = document.querySelector(".time");
 time.innerHTML = currenttime(now);
-
-function currentyear(getFullYear) {
-  let year = now.getFullYear();
-  let month = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"];
-  let months = month[now.getMonth()];
-  let dates = now.getDate();
-  if (dates < 10) {
-    dates = `0${dates}`;
-  }
-  return `${year}/${months}/${dates}`;
-}
-let dat = document.querySelector(".date");
-dat.innerHTML = currentyear(now);
 
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
@@ -64,11 +77,12 @@ function displayforecast(response) {
         <span class="col-12" id="tablerow">
         <div class="row">
         <span class="col-5">
-  <span class="weatherforecastdate">${formatDay(forecastDay.dt)}</span></span>
+  <span class="weatherforecastdate">${formatDay(forecastDay.dt)}</span>
+  </span>
   <span class="col-5">
   <img src="http://openweathermap.org/img/wn/${
     forecastDay.weather[0].icon
-  }@2x.png" alt="" width="50" class="weatherimg" /></span>
+  }@2x.png" alt="" width="45" class="weatherimg" /></span>
 <span class="col-1"><span class="weatherforecasttemp"><span class="weatherforecastmax">${Math.round(
           forecastDay.temp.max
         )}°</span></span>
@@ -93,7 +107,6 @@ function getforecast(coordinates) {
 }
 
 function showTemperature(response) {
-  console.log(response.data);
   document.querySelector("#city").innerHTML = response.data.name;
   let cloudy = document.querySelector(".cloud");
   cloudy.innerHTML = response.data.weather[0].main;
