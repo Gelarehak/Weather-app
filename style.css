@@ -12,10 +12,10 @@ body {
   margin: 30px auto 10px;
 }
 .imgtoday {
-  width: 150px;
+  width: 200px;
   display: block;
   margin: 0 auto;
-  padding: 20px;
+  padding: 0px;
 }
 .temperature {
   font-size: 100px;
@@ -23,6 +23,7 @@ body {
 .degrees {
   position: relative;
   top: -50px;
+  text-decoration: none;
 }
 .degrees:hover {
   text-decoration: none;
@@ -45,8 +46,9 @@ li {
 }
 #secondcol {
   padding: 20px 30px;
-  background: #f3f1f5;
+  background: #6e6b72;
   border-radius: 1px 25px 25px 1px;
+  color: #ece2e1;
 }
 .days {
   font-size: 30px;
@@ -77,4 +79,29 @@ footer {
 .discription {
   text-align: center;
   font-weight: bold;
+}
+.date {
+  margin-top: 10px;
+  margin-left: 220px;
+  color: #ece2e1;
+  font-weight: bold;
+}
+hr {
+  margin: 0 auto;
+  padding: 0px;
+}
+.weatherforecastdate {
+  font-size: 20px;
+}
+
+.weatherforecastmin {
+  opacity: 0.5;
+}
+#tablerow {
+  margin-top: 15px;
+}
+.btn-group-vertical:hover {
+  transition: all 1ms ease-in-out;
+  background: #ece2e1;
+  color: rgb(66, 66, 66);
 }
