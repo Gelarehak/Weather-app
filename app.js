@@ -119,6 +119,7 @@ function showTemperature(response) {
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
   );
+  celisusetemp = response.data.main.temp;
   let temp = document.querySelector(".temperature");
   temp.innerHTML = Math.round(response.data.main.temp);
   let iconelement = document.querySelector("#icon");
@@ -128,7 +129,6 @@ function showTemperature(response) {
   );
   iconelement.setAttribute("alt", response.data.weather[0].description);
   getforecast(response.data.coord);
-  celisusetemp = response.data.main.temp;
 }
 
 function searchcity(city) {
@@ -141,28 +141,33 @@ function findcity(event) {
   let city = document.querySelector("#searchcity").value;
   searchcity(city);
 }
-searchcity("Tehran");
-function displaycelisius(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector(".temperature");
-  temperatureElement.innerHTML = Math.round(celisusetemp);
-  fahrenhietlink.classList.remove("active");
-  celisuselink.classList.add("active");
-}
-let celisuselink = document.querySelector("#celsiuse");
-celisuselink.addEventListener("click", displaycelisius);
 
 function displayfahrenhiet(event) {
   event.preventDefault();
-  let fahrenhiettemp = (celisusetemp * 9) / 5 + 32;
   let temperatureElement = document.querySelector(".temperature");
-  temperatureElement.innerHTML = Math.round(fahrenhiettemp);
   celisuselink.classList.remove("active");
   fahrenhietlink.classList.add("active");
+  let fahrenhiettemp = (celisusetemp * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenhiettemp);
 }
+
+function displaycelisius(event) {
+  event.preventDefault();
+  celisuselink.classList.add("active");
+  fahrenhietlink.classList.remove("active");
+  let temperatureElement = document.querySelector(".temperature");
+  temperatureElement.innerHTML = Math.round(celisusetemp);
+}
+
+let celisusetemp = null;
+
+let form = document.querySelector("#searchcity");
+form = addEventListener("submit", findcity);
 
 let fahrenhietlink = document.querySelector("#fahrenhite");
 fahrenhietlink.addEventListener("click", displayfahrenhiet);
 
-let form = document.querySelector("#searchcity");
-form = addEventListener("submit", findcity);
+let celisuselink = document.querySelector("#celsiuse");
+celisuselink.addEventListener("click", displaycelisius);
+
+searchcity("Tehran");
