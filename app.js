@@ -120,6 +120,8 @@ function showTemperature(response) {
     response.data.wind.speed
   );
   celisusetemp = response.data.main.temp;
+  celisuselink.classList.add("active");
+  fahrenhietlink.classList.remove("active");
   let temp = document.querySelector(".temperature");
   temp.innerHTML = Math.round(response.data.main.temp);
   let iconelement = document.querySelector("#icon");
