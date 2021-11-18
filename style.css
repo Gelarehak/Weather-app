@@ -52,15 +52,15 @@ li {
   padding: 10px 30px;
   background: #e4d8d7;
   border-radius: 25px 1px 1px 25px;
+  border-radius: 25px;
 }
-#firstcol:hover {
-  transform: perspective(3000px) translate3d(20px, -5px, 120px);
-}
+
 #secondcol {
   padding: 20px 30px;
   background: #6e6b72;
   border-radius: 1px 25px 25px 1px;
   color: #ece2e1;
+  border-radius: 25px;
 }
 
 .days {
@@ -112,7 +112,7 @@ hr {
 }
 .btn-group-vertical:hover {
   transition: all 1ms ease-in-out;
-  background: #ece2e1;
+  background: #e4d8d7;
   color: rgb(66, 66, 66);
   transform: perspective(900px) translate3d(-10px, 10px, 80px);
 }
